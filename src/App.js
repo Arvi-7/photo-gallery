@@ -90,7 +90,7 @@ function App() {
      <div className="row">
         <div className='col-sm-1'></div>
           <div id='c1' className="card col-sm-3">
-           <button className='b'><img  id='i' src={img} alt={img}/></button>
+           <button className='b' onClick={popover}><img  id='i' src={img} alt={img}/></button>
             
           </div>
           <div className='col-sm-4'></div>
@@ -140,7 +140,7 @@ function App() {
   <Container>
     <button className='b' href='https://www.youtube.com/results?search_query=painting+of+flowers+by+bannu'>
       <FaYoutube  color='black' size={200}/>
-      
+      <h1>hgjckuy</h1>
   
 </button>
   </Container>
