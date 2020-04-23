@@ -5,6 +5,7 @@ import useState from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Nav,Navbar} from 'react-bootstrap';
+import { FaBeer, FaGoogle, FaGooglePlus,FaInstagram, FaYoutube } from 'react-icons/fa';
 
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/container';
@@ -14,45 +15,48 @@ import img from './img.png';
 import img1 from './img1.png'
 import img2 from './img2.png'
 import img3 from './img3.png'
+import img4 from './img 4.png'
+import img5 from './img 5.png'
+
 import Popover from 'react-bootstrap/Popover'
 import {OverlayTrigger,overlay} from 'react-bootstrap'
 import render from 'react'
+import StickyFooter from 'react-sticky-footer'
+import Figure from 'react-bootstrap/Figure'
 
 
 import {ToastHeader,Toast,Toastbody} from 'react-bootstrap';
 
 
 
+const popover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Content>
+      And here's some <strong>amazing</strong> content. It's very engaging.
+      right?
+    </Popover.Content>
+  </Popover>
+);
+
+
+
+const example = () =>(
+  <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+  <Button variant="success">Click me to see</Button>
+</OverlayTrigger>
+)
 
 
 
 
 function App() {
-
-  const popover = (
-    <Popover id="popover-basic">
-      <Popover.Title as="h3">Popover right</Popover.Title>
-      <Popover.Content>
-        And here's some <strong>amazing</strong> content. It's very engaging.
-        right?
-      </Popover.Content>
-    </Popover>
-  );
-  
-
-
-  const example = () =>(
-    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-    <Button variant="success">Click me to see</Button>
-  </OverlayTrigger>
-  )
- 
   
   
   return (
     
-    
-    <div className="root col-12" >
+    <>
+    <div className="root col" >
      
       <Navbar sticky='top' className='navbar' collapseOnSelect expand="lg"  variant="dark">
   <Navbar.Brand href="#home">colors</Navbar.Brand>
@@ -80,7 +84,7 @@ function App() {
     
   </Container>
 </Jumbotron>
-<hr className='hori'/>
+<hr />
 
 <div id='c'>
      <div className="row">
@@ -98,7 +102,7 @@ function App() {
        </div>
 </div>
 
-<hr className='hori'/>
+<hr />
 
 <div id='c'>
      <div className="row">
@@ -121,28 +125,29 @@ function App() {
      <div className="row">
         <div className='col-sm-1'></div>
           <div id='c1' className="card col-sm-3">
-              <img   id='i' src="https://image.shutterstock.com/image-photo/creative-layout-made-flowers-leaves-600w-547784302.jpg" alt="Avatar"/>
+              <img   id='i' src={img4} alt="Avatar"/>
           </div>
           <div className='col-sm-4'></div>
           <div id='c1' className="card col-sm-3">
-              <img id='i'  src="https://image.shutterstock.com/image-photo/creative-layout-made-flowers-leaves-600w-547784302.jpg" alt="Avatar"/>
+              <img id='i'  src={img5} alt="Avatar"/>
           </div>
           <div className='col-sm-1'></div>
 
        </div>
+
+       <hr />
+       <Jumbotron  className='jum'fluid>
+  <Container>
+    <button className='b' href='https://www.youtube.com/results?search_query=painting+of+flowers+by+bannu'>
+      <FaYoutube  color='black' size={200}/>
+      
+  
+</button>
+  </Container>
+</Jumbotron>
 </div>
 
 </body>
-<Jumbotron className='jum1' fluid>
-  <Container>
-    <h1>Fluid jumbotron</h1>
-    <p>
-      This is a modified jumbotron that occupies the entire horizontal space of
-      its parent.
-    </p>
-  </Container>
-</Jumbotron>
-
 
 
 
@@ -151,6 +156,21 @@ function App() {
       
 
 </div>
+<div>
+<footer className="page">
+<a href='https://www.instagram.com/sireesha_kosuru/'className='a'> <FaInstagram  color="black" size={50} title='instagram' /></a>
+
+<div  class="footer-copyright text-center py-3"><strong>© 2020 Copyrights Colors</strong>
+<li><small>This is a page where you can explore some colors</small></li> 
+  
+</div>
+
+</footer>
+
+</div>
+
+
+</>
 
   );
 }

@@ -54,9 +54,15 @@ background: linear-gradient(90deg, rgba(230,153,186,1) 0%, rgba(155,192,235,1) 1
   padding: 30px 30px 30px 30px ;
 
 }
-.hori{
+hr{
+  border-style: none;
+  border-top-style:dotted;
+  border-width: 50px;
+ 
+  width: 10%;
+  background-color: black ;
+  
 
-  width: 30px;
 
    
   border-style:inset ;
@@ -70,5 +76,17 @@ background: linear-gradient(90deg, rgba(230,153,186,1) 0%, rgba(155,192,235,1) 1
   border: transparent;
 }
 .jum1{
-  color: black;
+  background: black !important;
+  margin: 0px 0px -32px;
+  position: relative;
+  margin-bottom: -32px;
+
+}
+.page{
+  background: rgb(216,121,168);
+background: linear-gradient(90deg, rgba(216,121,168,1) 0%, rgba(93,156,230,0.9867297260701156) 92%);
+}
+.a{
+  margin:48% ;
+  
 }
